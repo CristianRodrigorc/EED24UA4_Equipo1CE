@@ -60,7 +60,7 @@ public class Cliente {
 //	}
 
 	// NEW
-	static void verMonedero(Cliente[] array, int identificador) {
+	static void mostrarMonedero(Cliente[] array, int identificador) {
 
 		for (int i = 0; i < array.length; i++) {
 
@@ -72,14 +72,14 @@ public class Cliente {
 
 	}
 
-	static void traspasarMonedero(Cliente[] array, int identificadorEmisor) {
+	static void cambiarMonedero(Cliente[] array, int identificadorEmisor) {
 		Scanner sc = new Scanner(System.in);
-		int identificadorReceptor;
+		int idReceptor;
 		double transferencia;
 		boolean error = true;
 		boolean error2 = true;
 		System.out.println("Introduce el identificador del receptor de la transferencia");
-		identificadorReceptor = sc.nextInt();
+		idReceptor = sc.nextInt();
 		System.out.println("Introduce el importe de la transferencia");
 		transferencia = sc.nextDouble();
 
@@ -89,7 +89,7 @@ public class Cliente {
 
 				for (int j = 0; j < array.length; j++) {
 
-					if (array[j].identificador == identificadorReceptor) {
+					if (array[j].identificador == idReceptor) {
 
 						array[j].monedero = array[j].monedero + transferencia;
 						array[i].monedero = array[i].monedero - transferencia;
@@ -108,7 +108,7 @@ public class Cliente {
 
 		if (error) {
 
-			System.out.println("Error..El Identificador :" + identificadorReceptor + " No existe.");
+			System.out.println("Error..El Identificador :" + idReceptor + " No existe.");
 
 		}
 		if (error2) {
@@ -191,6 +191,7 @@ public class Cliente {
 		return correcto;
 	}
 
+//	Cambio realizado en el nombre
 	static boolean verificarPassword(Cliente[] cliente, int password) {
 		boolean correcto = false;
 
@@ -280,6 +281,7 @@ public class Cliente {
 			System.out.println("Error la inversion :"+nombre+" no existe en tu cartera de inversiones");
 		}
 	}
+//	Cambio realizado en el nombre
 	static void mostrarInversiones(Cliente[] clientes,int identificadorCliente) {
 		for (int i = 0; i < clientes.length; i++) {
 

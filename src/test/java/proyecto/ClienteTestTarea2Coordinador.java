@@ -32,7 +32,7 @@ class ClienteTestTarea2Coordinador {
 		InputStream in = new ByteArrayInputStream(input.getBytes());
 		System.setIn(in);
 
-		Cliente.traspasarMonedero(clientes, 1);
+		Cliente.cambiarMonedero(clientes, 1);
 
 		// Verificar que la transferencia se realizo correctamente
 
@@ -58,7 +58,7 @@ class ClienteTestTarea2Coordinador {
 		InputStream in = new ByteArrayInputStream(input.getBytes());
 		System.setIn(in);
 
-		Cliente.traspasarMonedero(clientes, 1);
+		Cliente.cambiarMonedero(clientes, 1);
 
 		// Verificar que se imprime el mensaje puesto en el metodo
 		assertFalse(systemOut().contains("Error..El Identificador :6 No existe."));
@@ -82,7 +82,7 @@ class ClienteTestTarea2Coordinador {
 		InputStream in = new ByteArrayInputStream(input.getBytes());
 		System.setIn(in);
 
-		Cliente.traspasarMonedero(clientes, 6);// aqui esta el error el identificador emisor no existe
+		Cliente.cambiarMonedero(clientes, 6);// aqui esta el error el identificador emisor no existe
 
 		// Verificar que se imprime el mensaje puesto en el metodo
 		assertFalse(systemOut().contains("Error en tu identificador vuelve a logearte"));

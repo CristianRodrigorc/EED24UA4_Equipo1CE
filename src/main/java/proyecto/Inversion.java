@@ -33,9 +33,9 @@ public class Inversion {
 	}
 
 	//MÉTODO OBTENER BENEFICIOS con void 
-	static void obtenerBeneficiosVoid(Inversion inversion) {
-		Random rnd = new Random();
-		double rentabilidad = rnd.nextDouble(1, 2), porcentaje = rnd.nextDouble(0.05, 0.75), beneficio = 1;
+	static void mostrarBeneficiosVoid(Inversion inversion) {
+		Random random = new Random();
+		double rentabilidad = random.nextDouble(1, 2), porcentaje = random.nextDouble(0.05, 0.75), beneficio = 1;
 
 		if (rentabilidad == 1) {
 			porcentaje = (-1) * porcentaje;

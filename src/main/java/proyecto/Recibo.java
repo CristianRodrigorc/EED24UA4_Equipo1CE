@@ -17,7 +17,7 @@ public class Recibo {
 	 boolean pagarRecibos() {
 		//no hace falta pasar cantidad
 		
-		Random rnd = new Random();
+		Random radom = new Random();
 		double probabilidad =1; //rnd.nextDouble(1, 4); No funciona, lo pongo a 1 para probar que funcione que le toque pagar, para lo que inclui en cajero electronico
 		boolean pagar=false;
 		if(probabilidad==1) {

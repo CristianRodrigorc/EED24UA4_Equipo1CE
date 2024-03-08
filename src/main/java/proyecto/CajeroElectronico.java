@@ -111,7 +111,7 @@ public class CajeroElectronico {
 			case 1:
 				System.out.println("1: Mostrar saldo actual");
 				// System.out.println(Cliente.mostrarSaldo(clientes[0])); old
-				Cliente.verMonedero(clientes, identificadorCliente);// new
+				Cliente.mostrarMonedero(clientes, identificadorCliente);// new
 
 				break;
 			case 2:
@@ -127,7 +127,7 @@ public class CajeroElectronico {
 			case 4:
 				System.out.println("4: Transferir importe");
 				// Cliente.transferirImporte(clientes[0], clientes[0]); old
-				Cliente.traspasarMonedero(clientes, identificadorCliente);// new
+				Cliente.cambiarMonedero(clientes, identificadorCliente);// new
 				break;
 			case 5:
 				System.out.println("5: Añadir inversion");
@@ -163,7 +163,8 @@ public class CajeroElectronico {
 		} while (opcion != 0);
 	}
 
-	static boolean clienteExiste(Cliente[] clientes, int identificadorCliente) {
+//	cambio realizado en el nombre
+	static boolean comprobarCliente(Cliente[] clientes, int identificadorCliente) {
 
 		boolean correcto = false;
 
